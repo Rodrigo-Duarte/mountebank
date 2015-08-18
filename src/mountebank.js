@@ -118,7 +118,7 @@ function create (options) {
         });
     });
 
-    app.listen(options.port);
+    app.listen(process.env.VCAP_APP_PORT || options.port);
 
     logger.info(welcome);
     if (!process.stdout.isTTY) {
