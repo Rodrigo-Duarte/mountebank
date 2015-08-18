@@ -1,0 +1,9 @@
+---
+applications:
+- name: mountebank
+  memory: 1024M
+  host: mountebank-perf
+  buildpack: nodejs_buildpack
+  command: node bin/mb --port $PORT
+  instances: 1
+  timeout: 120
